@@ -8,38 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bgImg"></div>
     <div class="songText">Texto de la canción</div>
     <div class="musicPlayer">
-        <button onclick="myMusicPlayer.prevSong()">Prev</button>
-        <button onclick="myMusicPlayer.pause()">Pause</button>
-        <button onclick="myMusicPlayer.play()">Play</button>
-        <button onclick="myMusicPlayer.nextSong()">Next</button>
+        <button onclick="myMusicPlayer.prevSong(); myMusicGallery.updateSongInfo()">Prev</button>
+        <button onclick="myMusicPlayer.pause(); myMusicGallery.updateSongInfo()">Pause</button>
+        <button onclick="myMusicPlayer.play(); myMusicGallery.updateSongInfo()">Play</button>
+        <button onclick="myMusicPlayer.nextSong(); myMusicGallery.updateSongInfo()">Next</button>
     </div>
-    <script src="./main.js"></script>
-    <script>
-        const mySongs = [
-        new Song(
-        'Tú Me Dejaste De Querer',
-        'C. Tangana',
-        'c-tangana-nino-de-elche-la-hungara-tu-me-dejaste-de-querer.mp3'
-        ),
-        new Song(
-        'Ateo',
-        'C. Tangana',
-        "c-tangana-nathy-peluso-ateo-video-oficial.mp3"
-        ),
-        new Song(
-        'Demasiadas Mujeres',
-        'C. Tangana',
-        'y2mate.com - C Tangana  Demasiadas Mujeres Video Oficial.mp3'
-        ),
-        new Song(
-        'Nunca Estoy',
-        'C. Tangana',
-        'c-tangana-nunca-estoy-video-oficial.mp3'
-        ),
-        ]
-        const myMusicPlayer = new MusicPlayer(mySongs, ".songText", "./MEDIA/",)
-    </script>
+    <script src="./js/classes.js"></script>
+    <script src="./js/declarations.js"></script>
 </body>
 </html>
