@@ -1,9 +1,10 @@
 class Song {
-    constructor(songName, author, link, image) {
+    constructor(songName, author, link, image, bgColor,) {
         this.author = author
         this.songName = songName
         this.link = link
         this.image = image
+        this.bgColor = bgColor
     }
 }
 class MusicPlayer {
@@ -51,18 +52,21 @@ class MusicGallery {
 
     }
     setCurrentSongText(){
-        const elements = document.querySelectorAll(this.options.textSelector)
+        const elements = document.querySelectorAll(".songText")
         elements.forEach(element => {
             element.innerHTML = this.songs[this.musicPlayer.currentIndexSong].songName
         })
     }
     setCurrentSongImage(){
-        const elements = document.querySelectorAll(this.options.imgSelector)
+        const elements = document.querySelectorAll(".bgImg")
         elements.forEach(element => {
-            element.style.backgroundImage = `url(${this.options.imgFolder}${this.songs[this.musicPlayer.currentIndexSong].image})`
+            element.style.backgroundImage = `url(./MEDIA/img/${this.songs[this.musicPlayer.currentIndexSong].image})`
         })
     }
     setCurrentBgGradient(){
-
+        const elements = document.querySelectorAll("body")
+        elements.forEach(element => {
+            element.style.backgroundImage = `linear-gradient(${this.songs[this.musicPlayer.currentIndexSong].bgColor})`
+        })
     }
 }

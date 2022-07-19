@@ -5,19 +5,41 @@ body{
     align-items: center;
     justify-content: space-around;
     margin: 0;
+    background-image: linear-gradient(#49494A,#5B3E30);
+    font-size: 2.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.songText{
+    color: whitesmoke;
+    height: 2em;
+    text-shadow: rgb(94, 94, 94) 0 0 10px;
+    text-align: center;
 }
 .musicPlayer{
     flex-wrap: wrap;
     display: flex;
     width: 100vw;
+    margin-bottom: 10%;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: .7em;
+}
+.btn1{
+    width: 17%;
+    color: whitesmoke;
+    background-color: rgb(94, 94, 94);
+    border-radius: 20px;
+    border: none;
+    padding: .6em;
+
+
 }
 .bgImg{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background-size: cover;
     background-image: url(./MEDIA/img/tu-me-dejaste-de-querer.jpg);
     background-position: center;
+    border-radius: 30px;
+    border: #49494A  solid 1px;
 }
