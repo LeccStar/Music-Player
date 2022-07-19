@@ -56,6 +56,10 @@ class MusicGallery {
         elements.forEach(element => {
             element.innerHTML = this.songs[this.musicPlayer.currentIndexSong].songName
         })
+        const elements2 = document.querySelectorAll(".songArtist")
+        elements2.forEach(element => {
+            element.innerHTML = this.songs[this.musicPlayer.currentIndexSong].author
+        })
     }
     setCurrentSongImage(){
         const elements = document.querySelectorAll(".bgImg")

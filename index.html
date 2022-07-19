@@ -9,12 +9,15 @@
 </head>
 <body>
     <div class="bgImg"></div>
-    <div class="songText">Texto de la canción</div>
+    <div class="songInfo">
+        <div class="songText">Texto de la canción</div>
+        <div class="songArtist">Artista</div>
+    </div>
     <div class="musicPlayer">
-        <button class="btn1" onclick="myMusicPlayer.prevSong(); myMusicGallery.updateSongInfo()">|◀◀</button>
-        <button class="btn1" onclick="myMusicPlayer.pause(); myMusicGallery.updateSongInfo()">|  |</button>
+        <button class="btn1" onclick="myMusicPlayer.prevSong(); myMusicGallery.updateSongInfo()">|◀</button>
+        <button class="btn1" onclick="myMusicPlayer.pause(); myMusicGallery.updateSongInfo()">| |</button>
         <button class="btn1" onclick="myMusicPlayer.play(); myMusicGallery.updateSongInfo()">▶</button>
-        <button class="btn1" onclick="myMusicPlayer.nextSong(); myMusicGallery.updateSongInfo()">▶▶|</button>
+        <button class="btn1" onclick="myMusicPlayer.nextSong(); myMusicGallery.updateSongInfo()">▶|</button>
     </div>
     <script src="./js/classes.js"></script>
     <script src="./js/declarations.js"></script>

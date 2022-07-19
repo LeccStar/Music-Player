@@ -9,30 +9,35 @@ body{
     font-size: 2.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.songText{
+.songInfo{
     color: whitesmoke;
     height: 2em;
     text-shadow: rgb(94, 94, 94) 0 0 10px;
     text-align: center;
 }
+.songArtist{
+    font-size: .5em;
+    color: rgb(245, 245, 245, 0.8);
+
+}
 .musicPlayer{
     flex-wrap: wrap;
     display: flex;
     width: 100vw;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
     align-items: center;
     justify-content: center;
-    gap: .7em;
 }
 .btn1{
-    width: 17%;
+    font-size: .6em;
     color: whitesmoke;
-    background-color: rgb(94, 94, 94);
-    border-radius: 20px;
+    background-color: initial;
     border: none;
-    padding: .6em;
-
-
+    padding: 1.4em;
+}
+.btn1:active{
+    background-color: hsl(240, 1%, 29%, 0.35);
+    border-radius: 60px;
 }
 .bgImg{
     width: 350px;
