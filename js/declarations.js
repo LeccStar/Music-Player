@@ -30,5 +30,10 @@ const mySongs = [
         "#EAE7D4,#DFDECC",
     ),
 ]
+
+localStorage.setItem("mySongs",JSON.stringify(mySongs))
+const mySongsinStorage = JSON.parse( localStorage.getItem("mySongs"))
+console.log(mySongsinStorage)
+
 const myMusicPlayer = new MusicPlayer(mySongs, "./MEDIA/")
-const myMusicGallery = new MusicGallery(mySongs, myMusicPlayer, { bgSelector: ".background-gallery", textSelector: ".songText", imgSelector: ".bgImg", imgFolder: "./MEDIA/img/" })
+const myMusicGallery = new MusicGallery(mySongs, myMusicPlayer,)

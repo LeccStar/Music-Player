@@ -13,12 +13,27 @@ class MusicPlayer {
         this.currentIndexSong = 0
         this.folder = folder
         this.audioPlayer = new Audio(this.folder + this.songs[this.currentIndexSong].link)
+        this.status = "paused"
     }
     pause() {
         this.audioPlayer.pause()
     }
     play() {
-        this.audioPlayer.play()
+        if (this.status == "paused") {
+            this.status = "playing"
+            const elements = document.querySelectorAll(".playPause")
+            elements.forEach(element => {
+                element.innerHTML = "| |"
+            })
+            this.audioPlayer.play()
+        } else {
+            this.status = "paused"
+            const elements = document.querySelectorAll(".playPause")
+            elements.forEach(element => {
+                element.innerHTML = "▶"
+            })
+            this.audioPlayer.pause()
+        }
     }
     prevSong() {
         this.currentIndexSong = this.currentIndexSong - 1
@@ -27,7 +42,9 @@ class MusicPlayer {
         }
         this.pause()
         this.audioPlayer = new Audio(this.folder + this.songs[this.currentIndexSong].link)
-        this.play()
+        if (this.status == "playing") {
+            this.audioPlayer.play()
+        }
     }
     nextSong() {
         this.currentIndexSong = this.currentIndexSong + 1
@@ -36,14 +53,15 @@ class MusicPlayer {
         }
         this.pause()
         this.audioPlayer = new Audio(this.folder + this.songs[this.currentIndexSong].link)
-        this.play()
+        if (this.status == "playing") {
+            this.audioPlayer.play()
+        }
     }
 }
 class MusicGallery {
     constructor(songs = [], musicPlayer, options){
         this.songs = [...songs]
         this.musicPlayer = musicPlayer
-        this.options = {...options}
     }
     updateSongInfo(){
         this.setCurrentSongText()
